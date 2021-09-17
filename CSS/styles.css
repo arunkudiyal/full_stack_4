@@ -1,0 +1,25 @@
+h1 {
+    color: navy;
+}
+
+.sub-heading {
+    color: brown;
+}
+
+/* PSEUDO SELECTORS | Find the basic actions of the element & by the relationship */
+
+h1:hover {
+    color: pink;
+}
+
+/* .un-ordered-list:first-child {
+    color: green;
+}
+
+.un-ordered-list:last-child {
+    color: magenta;
+} */
+
+.un-ordered-list:nth-child(1), .un-ordered-list:nth-child(2), .un-ordered-list:nth-child(3) {
+    color: yellow;
+}
