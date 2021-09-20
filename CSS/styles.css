@@ -1,5 +1,20 @@
+/* h1 {
+    color: navy;
+} */
+
+/* SPECIFICITY - (inline, id, class, element) */
+
+body {
+    background: linear-gradient(to bottom, rgba(92, 15, 52, 0.8), rgba(92, 15, 52, 0.3));
+}
+
 h1 {
     color: navy;
+}
+
+
+#something {
+    color: green
 }
 
 .sub-heading {
@@ -8,9 +23,9 @@ h1 {
 
 /* PSEUDO SELECTORS | Find the basic actions of the element & by the relationship */
 
-h1:hover {
+/* h1:hover {
     color: pink;
-}
+} */
 
 /* .un-ordered-list:first-child {
     color: green;
@@ -21,5 +36,61 @@ h1:hover {
 } */
 
 .un-ordered-list:nth-child(1), .un-ordered-list:nth-child(2), .un-ordered-list:nth-child(3) {
-    color: yellow;
+    color: darkgray;
+}
+
+#google-link:visited {
+    color: black;
+}
+
+#github-link:visited {
+    color: black;
+}
+
+#github-link:hover {
+    color: blue;
+}
+
+
+/* ATTRIBUTE SELECTORS */
+h2[class=sub-heading] {
+    color: brown;
+}
+
+/* h1[id=my-header] {
+    color: green;
+} */
+
+/* 
+
+^ -> Starts with
+$ -> Ends with
+* -> Conatains  
+
+*/
+
+/* img[src^="./img"] {
+    border: 10px solid red;
+} */
+
+/* img[src$=".jpeg"] {
+    border: 10px solid red;
+} */
+
+/* img[src*="img"] {
+    border: 10px solid red;
+} */
+
+
+/* COLORS & GRADIENTS */
+
+#container-one {
+    height: 300px;
+    width: 70%;
+
+    /* background: linear-gradient(to bottom right, red, yellow, green, white, black, green, purple); */
+
+    /* background: linear-gradient(45deg, red, yellow, green, white, black, green, purple); */
+
+    background: radial-gradient(circle, rgba(87, 247, 121, 0.8), rgba(87, 247, 121, 0.3));
 }
