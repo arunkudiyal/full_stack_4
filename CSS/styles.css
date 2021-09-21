@@ -3,13 +3,20 @@
 } */
 
 /* SPECIFICITY - (inline, id, class, element) */
-
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400&display=swap');
 body {
     background: linear-gradient(to bottom, rgba(92, 15, 52, 0.8), rgba(92, 15, 52, 0.3));
+    font-size: 1.1em;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
 }
 
 h1 {
     color: navy;
+    font-size: 65px;
+    border-bottom: 2px solid white;
+    text-align: right;
+    margin: 25px 0 10px 0;
 }
 
 
@@ -86,11 +93,33 @@ $ -> Ends with
 
 #container-one {
     height: 300px;
-    width: 70%;
+    width: 70vw;
 
     /* background: linear-gradient(to bottom right, red, yellow, green, white, black, green, purple); */
 
     /* background: linear-gradient(45deg, red, yellow, green, white, black, green, purple); */
 
     background: radial-gradient(circle, rgba(87, 247, 121, 0.8), rgba(87, 247, 121, 0.3));
+}
+
+/* UNITS OF MEASUREMNETS */
+#img-1 {
+    height: 45vh;
+    width: 75%;
+}
+
+/* FONTS */
+
+/* BOX MODEL */
+#img-1 {
+    /* border: widthOfBorder styleOfBorder colorOfBorder; */
+    border: 2px solid white;
+
+    /* padding: top-px right-px bottom-px left-px; */
+    /* padding: top-bottom-px left-right-px */
+    /* padding: 10px; */
+    /* padding: 20px 15px 10px 5px; */
+    /* padding: 10px 5px */
+
+    margin-left: 15px;
 }
