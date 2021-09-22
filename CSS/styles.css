@@ -9,14 +9,17 @@ body {
     font-size: 1.1em;
     font-family: 'Raleway', sans-serif;
     font-weight: 300;
+    padding: 15px;
 }
 
 h1 {
     color: navy;
     font-size: 65px;
     border-bottom: 2px solid white;
+    border-top: 2px dotted white;
     text-align: right;
     margin: 25px 0 10px 0;
+    padding-top: 20px;
 }
 
 
@@ -122,4 +125,82 @@ $ -> Ends with
     /* padding: 10px 5px */
 
     margin-left: 15px;
+}
+
+/* DISPLAY PROPERTIES */
+a {
+    text-decoration: none;
+}
+
+#table {
+    margin-bottom: 15px;
+}
+
+#image-two {
+    /* display: none; */
+    display: inline;
+}
+
+.container{
+    background-color: blue;
+    margin-bottom: 15px;
+    padding: 10px;
+
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.container-item {
+    background: coral;
+    width: 70px;
+    height: 50px;
+    text-align: center;
+    font-size: 25px;
+    margin: 10px;
+}
+
+/* NAV BAR */
+
+li, a, button {
+    font-weight: 500;
+    text-decoration: none;
+    color: white
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px 0 10px;
+}
+
+.logo {
+    height: 100px;
+}
+
+.nav-links {
+    list-style: none;
+}
+
+.nav-links li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.nav-links li a:hover {
+    color: darkgray;
+}
+
+button {
+    padding: 10px 25px;
+    color: black;
+    background-color: rgba(160, 245, 32, 0.6);
+    border-radius: 100%;
+}
+
+button:hover {
+    background-color: rgba(160, 245, 32, 1);
+    padding: 20px 35px;
 }
