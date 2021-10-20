@@ -10,7 +10,7 @@
 // alert('Hey... this is a alert message!')
 
 
-// DATA TYPES
+// DATA TYPES - PDT, Non-Primitive DT (3)
 
 // Variable Declaration
 // variableName = constantValue
@@ -100,31 +100,133 @@
 
 // FUN STUFF
 
-console.log(2 + 2)
+// console.log(2 + 2)
 
-console.log('2' + '2')
+// console.log('2' + '2')
 
-// Internal Typecasting
-const test = 2 + '2'
-console.log(test)
-console.log(typeof test)
+// // Internal Typecasting
+// const test = 2 + '2'
+// console.log(test)
+// console.log(typeof test)
 
-console.log(100 + true)
-console.log(100 + false)
+// console.log(100 + true)
+// console.log(100 + false)
 
-console.log(100 + true + 'Hello')
+// console.log(100 + true + 'Hello')
+// console.log(true + 'Hi');
 
-// *------* 
+// // *------* 
 
-console.log(100/0)
+// console.log(100/0)
 
-console.log('a' - 10)
+// console.log('a' - 10)
 
-// PROBLEM STATEMENT - Who came first - EGG or HEN
+// // PROBLEM STATEMENT - Who came first - EGG or HEN
 
 
-// SOLUTION -->
+// // SOLUTION -->
 
-const values = ['🥚', '🐓']
-console.log(values)
-console.log(values.sort())
+// const values = ['🥚', '🐓']
+// console.log(values)
+// console.log(values.sort())
+
+
+
+// Non - Primitive Data Types - 3 Types
+
+
+// 1. Array - [ ]
+
+
+// Array using Array Constructor
+// const numbers = new Array(5, 10, 15, 20)
+// console.log(numbers)
+
+// const names = new Array('Priya', 'Maqsood', 'Sravan', 'Arun', 'Jyothi')
+// console.log(names)
+
+// const complex = new Array(101, 'Arun', true, null, undefined)
+// console.log(complex)
+
+// // ES6 Way of creating Arrays - [ ]
+// const courses = ['Data Science', 'Full Stack Development', 'Digital Marketing', 'AWS', [10, 20, 30, 40], [true, null, undefined]]
+// console.log(courses)
+
+// // Access the data from the Array ( arrayName[index] )
+// console.log(courses[4][2])
+// console.log(courses[5][0])
+
+
+// 2. Objects - { } - Always come in key-value pair
+
+
+// const user = {
+//     firstName: 'Harry',
+//     lastName: 'Potter',
+//     age: 23,
+//     // You can include Arrays inside the Objects
+//     hobbies: ['Magic', 'Getting in trouble', 'Wandering'],
+//     // You can also include Objects within Objects
+//     address: {
+//         street: '4th Avenue',
+//         city: 'London',
+//         country: 'United Kingdom'
+//     }
+// }
+// console.log(user)
+
+// // Access the Objects ( . )
+// console.log(`The country for ${user.firstName} ${user.lastName} is ${user.address.country}`)
+
+// console.log(`The fav hobby of ${user.firstName} ${user.lastName} is ${user.hobbies[0]}`);
+
+
+
+// 3. Array of Objects - [ {}, {}, {} ]
+
+
+const employees = [
+    {
+        emp_id: 101,
+        designation: 'SDE',
+        company: 'Microsoft',
+        yearsOfExp: 3,
+        skills: ['C', 'C++', 'Java'],
+        location: {
+            officeLocation: 'Mumbai',
+            pin: '123456'
+        }
+    },
+    {
+        emp_id: 102,
+        designation: 'Tester',
+        company: 'Apple',
+        yearsOfExp: 2,
+        skills: ['JUnit', 'Kafka'],
+        location: {
+            officeLocation: 'Hyderbad',
+            pin: '223344'
+        }
+    },
+    {
+        emp_id: 103,
+        designation: 'Product Manager',
+        company: 'Google',
+        yearsOfExp: 5,
+        skills: ['JavaScript', 'Python', 'C#'],
+        location: {
+            officeLocation: 'Bangalore',
+            pin: '2233445'
+        }
+    }
+]
+
+console.log(employees)
+
+// ACCESS THE DATA
+
+console.log(`The ID of all the employees are ${employees[0].emp_id} ${employees[1].emp_id} ${employees[2].emp_id}`);
+
+console.log(`The office location of all the employees are ${employees[0].location.officeLocation}, ${employees[1].location.officeLocation}, ${employees[2].location.officeLocation}`);
+
+console.log(`One of the skills of all the employees are ${employees[0].skills[0]}, ${employees[1].skills[0]}, ${employees[2].skills[0]}`)
