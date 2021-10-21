@@ -138,7 +138,7 @@
 // 1. Array - [ ]
 
 
-// Array using Array Constructor
+// Array using Array Constructor - new Array(length), new Array(elements seperated by ,)
 // const numbers = new Array(5, 10, 15, 20)
 // console.log(numbers)
 
@@ -185,48 +185,162 @@
 // 3. Array of Objects - [ {}, {}, {} ]
 
 
-const employees = [
-    {
-        emp_id: 101,
-        designation: 'SDE',
-        company: 'Microsoft',
-        yearsOfExp: 3,
-        skills: ['C', 'C++', 'Java'],
-        location: {
-            officeLocation: 'Mumbai',
-            pin: '123456'
-        }
-    },
-    {
-        emp_id: 102,
-        designation: 'Tester',
-        company: 'Apple',
-        yearsOfExp: 2,
-        skills: ['JUnit', 'Kafka'],
-        location: {
-            officeLocation: 'Hyderbad',
-            pin: '223344'
-        }
-    },
-    {
-        emp_id: 103,
-        designation: 'Product Manager',
-        company: 'Google',
-        yearsOfExp: 5,
-        skills: ['JavaScript', 'Python', 'C#'],
-        location: {
-            officeLocation: 'Bangalore',
-            pin: '2233445'
-        }
-    }
-]
+// const employees = [
+//     {
+//         emp_id: 101,
+//         designation: 'SDE',
+//         company: 'Microsoft',
+//         yearsOfExp: 3,
+//         skills: ['C', 'C++', 'Java'],
+//         location: {
+//             officeLocation: 'Mumbai',
+//             pin: '123456'
+//         }
+//     },
+//     {
+//         emp_id: 102,
+//         designation: 'Tester',
+//         company: 'Apple',
+//         yearsOfExp: 2,
+//         skills: ['JUnit', 'Kafka'],
+//         location: {
+//             officeLocation: 'Hyderbad',
+//             pin: '223344'
+//         }
+//     },
+//     {
+//         emp_id: 103,
+//         designation: 'Product Manager',
+//         company: 'Google',
+//         yearsOfExp: 5,
+//         skills: ['JavaScript', 'Python', 'C#'],
+//         location: {
+//             officeLocation: 'Bangalore',
+//             pin: '2233445'
+//         }
+//     }
+// ]
 
-console.log(employees)
+// console.log(employees)
 
-// ACCESS THE DATA
+// // ACCESS THE DATA
 
-console.log(`The ID of all the employees are ${employees[0].emp_id} ${employees[1].emp_id} ${employees[2].emp_id}`);
+// console.log(`The ID of all the employees are ${employees[0].emp_id} ${employees[1].emp_id} ${employees[2].emp_id}`);
 
-console.log(`The office location of all the employees are ${employees[0].location.officeLocation}, ${employees[1].location.officeLocation}, ${employees[2].location.officeLocation}`);
+// console.log(`The office location of all the employees are ${employees[0].location.officeLocation}, ${employees[1].location.officeLocation}, ${employees[2].location.officeLocation}`);
 
-console.log(`One of the skills of all the employees are ${employees[0].skills[0]}, ${employees[1].skills[0]}, ${employees[2].skills[0]}`)
+// console.log(`One of the skills of all the employees are ${employees[0].skills[0]}, ${employees[1].skills[0]}, ${employees[2].skills[0]}`)
+
+
+// CONDITIONAL STATEMENTS - if, else, else if
+
+// const age = 21
+
+// if(age < 18) {
+//     console.log('Sorry... you are NOT eligible to Vote!')
+// } else {
+//     console.log('Congratulations...! You CAN vote')
+// }
+
+// SHORT-HAND of conditionals
+// condition ? true : false
+// age < 18 ? console.log('Sorry... you are NOT eligible to Vote!') : console.log('Congratulations...! You CAN vote')
+
+// year  --> 1950-1980 Gen - 1 | 1981 - 1990 Gen - 2 | 1991 - 2000 Gen - 3 | 2001 - present Gen - 4
+// const year = 2021
+
+// if(year >= 1950 && year <= 1980) {
+//     console.log('Gen - I')
+// } else if(year >= 1981 && year <= 1990) {
+//     console.log('Gen - II')
+// } else if(year >= 1991 && year <= 2000) {
+//     console.log('Gen - III')
+// } else {
+//     console.log('Gen - IV')
+// }
+
+
+// JSON - JavaScript Object Notation
+// console.log(employees)
+
+// // convert AOO to JSON - stringify()
+// const jsonData = JSON.stringify(employees)
+// console.log(jsonData);
+
+// // convert JSON data into AOO - parse()
+// console.log(JSON.parse(jsonData))
+
+
+
+// LOOPS - Basic Loops(for, while) | Higher Order Array Methods
+
+// for(;;)
+
+// for(;;) {
+//     console.log('Hello...')
+// }
+
+// for(initionalization; condition; inc/dec)
+// for(let i=1; i <= 5; i+=1) {
+//     console.log('Hello....')
+// }
+
+// // Print the table of 2
+// for(let i=2; i <= 20; i+=2) {
+//     console.log(`2 x ${i/2} = ${i}`)
+// }
+
+// // while
+
+// // initialisation - outside
+// let i = 1
+// // condition in the while
+// while(i <= 5) {
+//     console.log(i)
+//     // inc/dec - inside the while loop
+//     i+=1
+// }
+
+// // Print the table of 5 using while()
+// let num = 5
+// while(num <= 50) {
+//     console.log(`5 x ${num/5} = ${num}`);
+//     num+=5
+// }
+
+
+// Array of Objects
+// const todos = [
+//     {
+//         id: 1,
+//         task: 'Meeting with the team',
+//         isCompleted: true
+//     },
+//     {
+//         id: 2,
+//         task: 'Take out the Trash',
+//         isCompleted: false
+//     },
+//     {
+//         id: 3,
+//         task: 'take my dog out for a walk',
+//         isCompleted: true
+//     },
+//     {
+//         id: 4,
+//         task: 'Go out for shopping',
+//         isCompleted: false
+//     }
+// ]
+
+// // for(let i=0; i < todos.length; i+=1) {
+// //     if(todos[i].isCompleted == true) {
+// //         console.log(todos[i].task)
+// //     }
+// // }
+
+// // using higher order array methods - for-of
+// // for(let iteratingValue of arrayName)
+// for(let todo of todos) {
+//     todo.isCompleted == false ? console.log(todo.task) : ''
+// }
