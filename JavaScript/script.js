@@ -223,6 +223,12 @@
 
 // console.log(employees)
 
+// for(let i=0; i < employees[2].skills.length; i++) {
+//     if(i % 2 == 0) {
+//         console.log(employees[2].skills[i]);
+//     }
+// }
+
 // // ACCESS THE DATA
 
 // console.log(`The ID of all the employees are ${employees[0].emp_id} ${employees[1].emp_id} ${employees[2].emp_id}`);
@@ -333,6 +339,7 @@
 //     }
 // ]
 
+// console.log(todos)
 // // for(let i=0; i < todos.length; i+=1) {
 // //     if(todos[i].isCompleted == true) {
 // //         console.log(todos[i].task)
@@ -344,3 +351,86 @@
 // for(let todo of todos) {
 //     todo.isCompleted == false ? console.log(todo.task) : ''
 // }
+
+
+// FUNCTIONS IN JS
+
+// function functionName(parameters) { ...implementation }
+
+// Function declare and define
+// function add(a, b) {
+//     if(typeof a == 'number' && typeof b == 'number') {
+//         console.log(a + b)
+//     } else {
+//         console.log('Please pass Number values')
+//     }
+// }
+
+// function product(a, b) {
+//     if(typeof a == 'number' && typeof b == 'number') {
+//         return a * b
+//     } else {
+//         return `Enter 'number' values!`
+//     }
+// }
+
+// // call the function
+// add(10, 20)
+// add(100, 200)
+// add(true, false)
+
+// const response = product(10, 10)
+// console.log(response * 2)
+
+// const response2 = product('hi', 'hello')
+// console.log(response2)
+
+
+// ES6 Arrow Functions
+
+// const variableName/funcName = (parameters) => { ...implementation }
+// const add = (a, b) => {
+//     // implementation
+//     return a + b
+// }
+
+// const division = (a, b) => {
+//     if(typeof a == 'number' && typeof b == 'number') {
+//         return a / b
+//     } else {
+//         return `please pass numbers!`
+//     }
+// }
+
+// const res = add(400, 500)
+// console.log(res)
+
+// console.log(typeof add)
+
+// const result = division(100, 00)
+// console.log(result)
+
+
+// DIFFERNCE B/W == & === 
+
+// 1.) == compares just the value of the variables BUT === not only compares the value but also the typeof the variables
+// 2.) In == internal typecasting happend but === internal typecasting is prohibited
+
+// const a = true
+// const b = 1
+
+// if(a == b) {
+//     console.log('they are the same')
+// } else {
+//     console.log('they are not same')
+// }
+
+// if(a === b) {
+//     console.log('they are the same')
+// } else {
+//     console.log('they are not same')
+// }
+
+
+
+// OBJECT ORIENTED PROGRAMMING - OOPs
