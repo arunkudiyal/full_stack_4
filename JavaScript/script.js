@@ -432,5 +432,131 @@
 // }
 
 
+// DATES IN JS
+// new Date('mm-dd-yyyy')
+// const date = new Date('7-9-1993')
+// console.log(date)
+
+// console.log(date.getFullYear())
+// console.log(date.getMonth() + 1)
+// console.log(date.getDate())
+// console.log(date.getDay())
 
 // OBJECT ORIENTED PROGRAMMING - OOPs
+
+// class -> A template which gives you a way to construct real-world entities
+// obejcts -> The real-world entities created from the respective class
+
+// traditional way - Constructor Function
+// modern way - class
+
+// function Person_Class(firstName, lastName, dob) {
+//     // create data related to the person | Data Members
+//     let first_name = firstName
+//     let last_name = lastName
+//     let _dob = dob
+
+//     // Getters and Setters - Methods
+//     // Getters - Functions which allow you to read the values from the class itself
+//     this.getFirstName = () => {
+//         return first_name
+//     }
+
+//     this.getLastName = () => {
+//         return last_name
+//     }
+
+//     this.getDOB = () => {
+//         return _dob
+//     }
+
+//     // Setters - Function which allow you to update the values within the class
+//     this.setFirstName = (newName) => {
+//         first_name = newName
+//         return first_name
+//     }
+
+//     this.setLastName = (newName) => {
+//         last_name = newName
+//         return last_name
+//     }
+
+//     this.setDOB = (newDOB) => {
+//         _dob = newDOB
+//         return _dob
+//     }
+
+//     // Person should be able to perfoms certain functionalities | Methods 
+//     this.getFullName = () => {
+//         return `${first_name} ${last_name}`;
+//     }
+
+//     this.getFullName = (fName, lName) => {
+//         return `${fName} ${lName}`
+//     }
+
+//     this.getBirthYear = () => {
+//         return _dob.getFullYear()
+//     }
+// }
+
+// // How to create/initialise Objects from that class [ Person_Class ] - 'new'
+// const person_one = new Person_Class('John', 'Doe', '7-2-1993')
+
+// console.log(person_one)
+// // Getters
+// console.log(person_one.getFirstName())
+// console.log(person_one.getLastName())
+// console.log(person_one.getDOB())
+// // Setters
+// console.log(person_one.setFirstName('Harry'));
+// console.log(person_one.setLastName('Potter'));
+// console.log(person_one.setDOB('2-9-1994'));
+
+// console.log(person_one.getFullName('Demo', 'Name'));
+// console.log(person_one)
+
+// console.log('Full name of Person One is : ' + person_one.getFullName())
+
+
+
+// WAY 2 - JS Classes
+
+// Cannot create more than one constructor
+// Protype of class is still an Object
+
+// class Person {
+//     // constructor
+//     // constructor() {}
+
+//     // Data Memebers
+//     constructor(firstName, lastName, dob) {
+//         this.firstName = firstName
+//         this.lastName = lastName
+//         this.dob = dob
+//     }
+
+//     // Methods
+//     getFullName() {
+//         return `${this.firstName} ${this.lastName}`
+//     }
+
+//     getBirthYears() {
+//         return this.dob.getFullYear()
+//     }
+// }
+
+// class Student extends Person {
+//     constructor(firstName, lastName, dob, email, rollNo) {
+//         super(firstName, lastName, dob)
+//         this.email = email
+//         this.rollNo = rollNo
+//     }
+// }
+
+// // Initialise the Object
+// const personOne = new Person('John', 'Doe', '7-5-1993')
+// console.log(personOne);
+
+// const student = new Student('Arun', 'Kudiyal', '7-5-1992', 'test@email.com', '10034')
+// console.log(student)
