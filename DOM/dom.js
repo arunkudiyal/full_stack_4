@@ -43,9 +43,109 @@
 //     console.log(listItems[i].textContent)
 // }
 
-// background color of every even valued listItems should be grey
+// // background color of every even valued listItems should be grey
 // for(let i=0; i < listItems.length; i++) {
 //     if(i % 2 == 0) {
 //         listItems[i].style.backgroundColor = 'lightGrey'
 //     }
 // }
+
+
+// 3. tagName
+
+// const listItems = document.getElementsByTagName('li')
+// for(let i=0; i < listItems.length; i++) {
+//     // console.log(listItems[i].textContent)
+//     if(i % 2 != 0) {
+//         listItems[i].style.backgroundColor = 'lightGrey'
+//     }
+// }
+
+
+// 4. querySelector -> id (#) + className (.) + tagName | It only returns the first reference for id, class, tagName
+
+// const submitBtn = document.querySelector('#submitBtn') 
+// console.log(submitBtn)
+
+// const listItems = document.querySelector('.list-group-item')
+// console.log(listItems);
+
+// const listElements = document.querySelector('li')
+// console.log(listElements);
+
+
+// 4. querySelectorAll -> id (#) + className (.) + tagName | It only returns the first reference for id, class, tagName
+
+// const submitBtn = document.querySelectorAll('#submitBtn') 
+// console.log(submitBtn)
+
+// const listItems = document.querySelectorAll('.list-group-item')
+// console.log(listItems);
+// listItems[2].style.fontFamily = 'cursive'
+
+// const listElements = document.querySelectorAll('li')
+// console.log(listElements);
+
+
+
+// DOM EVENTS - addEventListner()
+
+// element.addEventListner('eventName', functionName)
+// const btn = document.querySelector('#button')
+// const textInput = document.querySelector('#text-input')
+
+// WAY - 1
+// function onClickHandler() {
+//     console.log('Button Clicked!')
+// }
+
+// btn.addEventListener('click', onClickHandler)
+
+
+// WAY - 2
+// btn.addEventListener('click', () => { console.log('Button was clicked...') } )
+
+// btn.addEventListener('dblclick', () => {
+//     console.log('Double Click Happened!')
+// })
+
+// FEW COMMONLY USED EVENTS....
+
+// textInput.addEventListener('focus', () => {
+//     console.log('Focused!')
+// })
+
+// textInput.addEventListener('blur', () => {
+//     console.log('Blurred!')
+// })
+
+// textInput.addEventListener('copy', () => {
+//     console.log('Copied!!')
+// })
+
+// textInput.addEventListener('cut', () => {
+//     console.log('Cut!!')
+// })
+
+// textInput.addEventListener('paste', () => {
+//     console.log('Pasted!!')
+// })
+
+// textInput.addEventListener('keyup', () => {
+//     console.log('You dropped the key!')
+// })
+
+// textInput.addEventListener('keydown', () => {
+//     console.log('You pressed the key!')
+// })
+
+
+
+// EVENT PARAMETER
+
+const submit = document.querySelector('#submitBtn')
+
+submit.addEventListener('click', (e) => {
+    e.preventDefault()
+    console.log(e)
+})
