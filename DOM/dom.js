@@ -37,7 +37,8 @@
 // 2. className
 
 
-// const listItems = document.getElementsByClassName('list-group-item')
+// const items = document.getElementsByClassName('list-group-item')
+// console.log(items);
 
 // for(let i=0; i < listItems.length; i++) {
 //     console.log(listItems[i].textContent)
@@ -141,11 +142,69 @@
 
 
 
-// EVENT PARAMETER
+// EVENT PARAMETER -> A parameter passed to a function which listens to an event
 
-const submit = document.querySelector('#submitBtn')
+// const submit = document.querySelector('#submitBtn')
 
-submit.addEventListener('click', (e) => {
-    e.preventDefault()
-    console.log(e)
-})
+// submit.addEventListener('click', (e) => {
+//     e.preventDefault()
+//     console.log(submit)
+//     submit.setAttribute('class', 'btn btn-dark btn-lg')
+//     console.log(e)
+// })
+
+
+// const textBox = document.querySelector('#text-input')
+
+// textBox.addEventListener('keyup', (e) => {
+//     console.log(e.target.value)
+// })
+
+
+// FUN ACTIVITY - DOM, Evnets & Event Parameters
+
+// const boxOne = document.getElementById('box-one')
+
+// boxOne.addEventListener('mouseenter', (e) => {
+//     boxOne.style.backgroundColor = `rgb(${e.offsetX}, ${e.offsetY}, 100)`
+// })
+
+// boxOne.addEventListener('mouseleave', (e) => {
+//     boxOne.style.backgroundColor = `rgb(${e.offsetX}, ${e.offsetY}, 150)`
+// })
+
+
+
+// DOM TRAVERSALS - A method to access any element(s) based on their relationship {parent, children, siblings, ...}
+
+// PARENT RELATIONSHIP - parentElement
+// const items = document.querySelector('#items')
+// items.parentElement.style.backgroundColor = `red`
+
+// // Chaining of Relationships
+// items.parentElement.parentElement.style.backgroundColor = `green`
+
+
+// Children ELements - firstChild , lastChild
+
+// const items = document.querySelector('#items')
+// console.log(items.children)
+
+// items.children[1].style.color = 'yellow'
+
+// // firstChild
+// console.log(items.firstChild)            // text
+// console.log(items.firstElementChild);
+
+// // lastChild
+// // console.log(items.lastChild)                // text
+// console.log(items.lastElementChild)
+
+
+// // SIBLINGS - previousSiblings, nextSibling
+
+// // console.log(items.previousSibling)          // text
+// console.log(items.previousElementSibling)
+
+// // console.log(items.nextSibling)              // text
+// console.log(items.nextElementSibling)
