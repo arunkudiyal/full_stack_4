@@ -208,3 +208,72 @@
 
 // // console.log(items.nextSibling)              // text
 // console.log(items.nextElementSibling)
+
+
+// vvvvvvv. IMPORTANT - Creating HTML Elements using JS - createElement(), setAttribute('nameOfAttr', 'valueOfAttr'), appendChild()
+
+// const listItem = document.createElement('li')
+// listItem.setAttribute('class', 'list-group-item')
+// listItem.setAttribute('id', 'list-item-7')
+// listItem.textContent = 'Item 7'
+// console.log(listItem)
+
+// document.querySelector('#items').appendChild(listItem)
+
+// Activity 
+// const btn = document.querySelector('#submitBtn')
+
+// btn.addEventListener('click', (e) => {
+//     e.preventDefault()
+
+//     // The value will be inserted in the textbox BEFORE the button click
+//     const textBoxValue = document.querySelector('#text-input').value
+
+//     // Validate your form
+//     if(textBoxValue === '') {
+//         alert('Enter the valid Item')
+//     } else {
+//         // Value has to put in the DOM (ul)
+//         const listItem = document.createElement('li')
+//         listItem.setAttribute('class', 'list-group-item')
+//         listItem.textContent = textBoxValue
+
+//         document.querySelector('#items').appendChild(listItem)
+//     }
+// })
+
+
+
+// FORMS & Form Validation
+
+const submit = document.querySelector('#submit-button')
+
+submit.addEventListener('click', (e) => {
+    e.preventDefault()
+
+    const name = document.querySelector('#name').value
+    const email = document.querySelector('#email').value
+    const password = document.querySelector('#password').value
+    const gender = document.querySelector('#gender').value
+    const feedback = document.querySelector('#feedback').value
+    const happy = document.querySelector('#happy').value
+    const agree = document.querySelector('#agree')
+    
+    // Validation
+    if(name === '' || email === '' || password === '' || gender === '' || feedback === '' || happy === '' ) {
+        if(!agree.checked) {
+            alert('Please check the checkbox...')
+        } else {
+            alert('Please enter valid details...')
+        }
+    } else {
+        // Data is valid
+        const userData = {name, email, password, gender, feedback, happy, agree}
+
+        // Pass this data to your DB
+        console.log(userData)
+
+        // Clear the form
+        document.querySelector('#my-form').reset()
+    }
+})
