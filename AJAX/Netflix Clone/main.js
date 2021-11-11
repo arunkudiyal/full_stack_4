@@ -1,40 +1,42 @@
-// const xhr = new XMLHttpRequest()
+const xhr = new XMLHttpRequest()
 
-// const data = null
+const data = null
 
-// const url = 'https://movie-database-imdb-alternative.p.rapidapi.com/?s=Avengers%20Endgame&r=json&page=1'
+const btn = document.querySelector('#serach-btn')
+btn.addEventListener('click', () => {
+    const serach = document.querySelector('#search').value
 
-// xhr.withCredentials = true
+    let url = `https://api.themoviedb.org/3/search/movie?api_key=473ce42b7b92f1fcd1bb5f06b4217fdb&query=`
 
-// xhr.open('GET', url)
+    url = `${url}${serach}`
 
-// // Set the request headers
-// xhr.setRequestHeader("x-rapidapi-host", "movie-database-imdb-alternative.p.rapidapi.com")
+    // AJAX Request
+    xhr.open('GET', url)
 
-// xhr.setRequestHeader("x-rapidapi-key", "55aa9f9cbbmsh1c401325784bdd7p18f48ajsnb3d062671273")
+    // Set the request headers
+    // xhr.setRequestHeader("x-rapidapi-host", "movie-database-imdb-alternative.p.rapidapi.com")
 
-// xhr.onreadystatechange = () => {
-//     if(xhr.status === 200 && xhr.readyState === 4) {
-//         console.log(xhr.responseText)
-//     }
-// }
+    // xhr.setRequestHeader("x-rapidapi-key", "55aa9f9cbbmsh1c401325784bdd7p18f48ajsnb3d062671273")
 
-// xhr.send(data)
+    xhr.onreadystatechange = () => {
+        if(xhr.status === 200 && xhr.readyState === 4) {
+            const response = JSON.parse(xhr.responseText)
 
+            console.log(response)
 
-const data = null;
+            let output = ''
 
-const xhr = new XMLHttpRequest();
-xhr.withCredentials = true;
+            for(let i=0; i < response.results.length; i++) {
+                if(response.results[i].title != undefined) {
+                    output += `<b><u>${response.results[i].title}</u></b> <br /> <br /> ${response.results[i].overview} <br /> <br /> <hr />`
+                }
+            }
 
-xhr.addEventListener("readystatechange", function () {
-	if (this.readyState === this.DONE) {
-		console.log(this.responseText);
-	}
-});
+            const container = document.querySelector('#movie-details')
 
-xhr.open("GET", "https://movie-database-imdb-alternative.p.rapidapi.com/?s=Avengers%20Endgame&r=json&page=1");
-xhr.setRequestHeader("x-rapidapi-host", "movie-database-imdb-alternative.p.rapidapi.com");
-xhr.setRequestHeader("x-rapidapi-key", "55aa9f9cbbmsh1c401325784bdd7p18f48ajsnb3d062671273");
+            container.innerHTML = output
+        }
+    }
 
-xhr.send(data);
+    xhr.send(data)
+})
