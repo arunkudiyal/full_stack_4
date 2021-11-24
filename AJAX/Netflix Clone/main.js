@@ -15,7 +15,6 @@ btn.addEventListener('click', () => {
 
     // Set the request headers
     // xhr.setRequestHeader("x-rapidapi-host", "movie-database-imdb-alternative.p.rapidapi.com")
-
     // xhr.setRequestHeader("x-rapidapi-key", "55aa9f9cbbmsh1c401325784bdd7p18f48ajsnb3d062671273")
 
     xhr.onreadystatechange = () => {
@@ -35,7 +34,7 @@ btn.addEventListener('click', () => {
 
                 let videoUrl = `https://api.themoviedb.org/3/movie/${response.results[i].id}?api_key=473ce42b7b92f1fcd1bb5f06b4217fdb&append_to_response=videos`
 
-                // console.log(videoUrl)
+                console.log(videoUrl)
 
                 xhr.open('GET', videoUrl)
 
