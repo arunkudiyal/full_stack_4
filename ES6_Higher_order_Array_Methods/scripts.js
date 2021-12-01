@@ -1,5 +1,12 @@
 // console.log('It Works...')
 
+// 1. for-of()
+// 2. forEach()
+// 3. filter()
+// 4. map()
+// 5. sort()
+// 6. reduce()
+
 // Lists
 const companies = [
     {name: 'Company One', category: 'Finance', start: 1981, end: 2003},
@@ -14,6 +21,10 @@ const companies = [
 ]
 
 const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32]
+
+const alphabets = ['X', 'S', 'P', 'A', 'J', 'M', 'K', 'N', 'Q', 'T', 'Z', 'H']
+
+const names = ['arun', 'aarun', 'maqsood', 'priya', 'sravan', 'jyothi', 'vishweshwar', 'radha', 'aaarun']
 
 // console.log(companies)
 
@@ -66,6 +77,10 @@ const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32]
 // }
 // console.log(ageOfCompanies)
 
+// convert each value +2
+// const incrementAge = ages.map( age => age + 2 )
+// console.log(incrementAge)
+
 // const ageOfCompanies = companies.map(company => company.end - company.start)
 // console.log(ageOfCompanies)
 
@@ -88,3 +103,49 @@ const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32]
 // console.log(eighteesCompanyCategories)
 
 // Q:- CompanyName --> AgeOfTheComapny - ASSIGNMENT
+// const ageOfCompanies = companies.map( company => {return `${company.name} ---> ${company.end - company.start}`} )
+// console.log(ageOfCompanies)
+
+// 5. 
+// sort() - NUMERIC DATA - SORT the DATA - ascending order or descending order | RETURNS AN ARRAY
+
+// const asceSortedAges = ages.sort( (a, b) => (a > b) ? 1 : -1 )
+// console.log(asceSortedAges)
+
+// const descSortedAges = ages.sort( (a, b) => (a < b) ? 1 : -1 )
+// console.log(descSortedAges)
+
+// const descSortedAges = ages.sort( (a, b) => (a > b) ? -1 : 1 )
+// console.log(descSortedAges)
+
+// Q: Sort the companies based on which company started first
+// const sortedCompanies = companies.sort( (a, b) => (a.start > b.start) ? 1 : -1 )
+// console.log(sortedCompanies)
+
+// const sortedAlphabets = alphabets.sort( (a, b) => (a > b) ? 1 : -1 )
+// console.log(sortedAlphabets)
+
+// const sortedNames = names.sort( (a, b) => (a > b) ? 1 : - 1 )
+// console.log(sortedNames)
+
+// const sortedCompanies = companies.sort( (a, b) => (a.name > b.name) ? 1 : -1 )
+// console.log(sortedCompanies)
+
+// WHY WE SHOULD NOT USE .sort() ON NON-NUMERIC DATA
+
+// 6.
+// reduce() - A specific mathematic solution for elements in an array
+
+// const sumOfAges = ages.reduce( (total, age) => {
+//     // Body of the operation
+//     return total + age
+// }, 3 )
+
+// console.log(sumOfAges)
+
+// // Q:- Total years of every company
+// const totalAgeOfAllCompanies = companies.reduce( (total, company) => {
+//     return total + (company.end - company.start)
+// }, 0 )
+
+// console.log(totalAgeOfAllCompanies)
